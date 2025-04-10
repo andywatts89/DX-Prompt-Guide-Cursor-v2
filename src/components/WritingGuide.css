@@ -1,0 +1,143 @@
+.writing-guide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.guide-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.guide-header h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.guide-header p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.checklist-section {
+    margin-bottom: 4rem;
+}
+
+.checklist-section h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.checklist-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.item-icon {
+    font-size: 1.5rem;
+}
+
+.item-header h3 {
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+.item-description {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.item-example {
+    background: #f7fafc;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.item-example code {
+    color: #4a5568;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+}
+
+.examples-section h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
+}
+
+.examples-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.example-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.example-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.example-icon {
+    font-size: 1.5rem;
+}
+
+.example-header h3 {
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+.example-content {
+    background: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.example-content code {
+    color: #4a5568;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+@media (max-width: 768px) {
+    .guide-header h1 {
+        font-size: 2rem;
+    }
+
+    .checklist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .example-content {
+        padding: 1rem;
+    }
+} 

@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import SearchSection from './components/SearchSection';
+import FilterChips from './components/FilterChips';
+import PromptGrid from './components/PromptGrid';
+import WritingGuide from './components/WritingGuide';
+import PromptDetail from './components/PromptDetail';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <SearchSection />
+                <FilterChips />
+                <PromptGrid />
+              </>
+            } />
+            <Route path="/writing-guide" element={<WritingGuide />} />
+            <Route path="/prompt/:id" element={<PromptDetail />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
